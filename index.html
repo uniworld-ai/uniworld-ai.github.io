@@ -16,6 +16,8 @@
       width: auto;
       margin-left: calc(50% - 50vw);
       margin-right: calc(50% - 50vw);
+      margin-top: 0;
+      padding-top: 0;
       padding-left: 0;
       padding-right: 0;
     }
@@ -24,6 +26,28 @@
       border-radius: 0;
       border-left: 0;
       border-right: 0;
+    }
+
+    .person h4 a,
+    .org-item h4 a {
+      color: #2f6f7d;
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 180ms ease, text-shadow 180ms ease;
+    }
+
+    .person h4 a:hover,
+    .org-item h4 a:hover {
+      color: #1f5562;
+      text-shadow: 0 1px 0 rgba(31, 85, 98, 0.18);
+    }
+
+    .footer a {
+      color: #2f6f7d;
+    }
+
+    .footer a:hover {
+      color: #1f5562;
     }
   </style>
   <script defer src="script.js"></script>
@@ -154,13 +178,13 @@
       <h2 class="section-title">Invited Speakers</h2>
       <div class="people-frame">
         <div class="people-grid">
-          <article class="person"><img class="avatar-photo" src="https://www.3dunderstanding.org/team/00_angela_dai/picture.jpg" alt="Angela Dai" loading="lazy" /><h4>Angela Dai</h4><p class="person-affil">TUM</p></article>
-          <article class="person"><img class="avatar-photo" src="https://dimadamen.github.io/Dima2019_s.jpg" alt="Dima Damen" loading="lazy" /><h4>Dima Damen</h4><p class="person-affil">University of Bristol</p></article>
-          <article class="person"><img class="avatar-photo" src="https://csprofkgd.github.io/assets/img/prof_pic.jpg" alt="Kosta Derpanis" loading="lazy" /><h4>Kosta Derpanis</h4><p class="person-affil">York University / Samsung AI</p></article>
-          <article class="person"><img class="avatar-photo" src="https://www.cvlibs.net/site/andreas_geiger.jpg" alt="Andreas Geiger" loading="lazy" /><h4>Andreas Geiger</h4><p class="person-affil">University of Tubingen</p></article>
-          <article class="person"><img class="avatar-photo" src="https://anikem.github.io/images/profile_aniK.jpg" alt="Aniruddha Kembhavi" loading="lazy" /><h4>Aniruddha Kembhavi</h4><p class="person-affil">Wayve</p></article>
-          <article class="person"><img class="avatar-photo" src="https://staff.fnwi.uva.nl/p.s.m.mettes/images/profile-pm.jpg" alt="Pascal Mettes" loading="lazy" /><h4>Pascal Mettes</h4><p class="person-affil">University of Amsterdam</p></article>
-          <article class="person"><img class="avatar-photo" src="imgs/mike_show.png" alt="Mike Shou" loading="lazy" /><h4>Mike Shou</h4><p class="person-affil">National University of Singapore</p></article>
+          <article class="person"><img class="avatar-photo" src="https://www.3dunderstanding.org/team/00_angela_dai/picture.jpg" alt="Angela Dai" loading="lazy" /><h4><a href="https://www.3dunderstanding.org/" target="_blank" rel="noopener noreferrer">Angela Dai</a></h4><p class="person-affil">TUM</p></article>
+          <article class="person"><img class="avatar-photo" src="https://dimadamen.github.io/Dima2019_s.jpg" alt="Dima Damen" loading="lazy" /><h4><a href="https://dimadamen.github.io/" target="_blank" rel="noopener noreferrer">Dima Damen</a></h4><p class="person-affil">University of Bristol</p></article>
+          <article class="person"><img class="avatar-photo" src="https://csprofkgd.github.io/assets/img/prof_pic.jpg" alt="Kosta Derpanis" loading="lazy" /><h4><a href="https://csprofkgd.github.io/" target="_blank" rel="noopener noreferrer">Kosta Derpanis</a></h4><p class="person-affil">York University / Samsung AI</p></article>
+          <article class="person"><img class="avatar-photo" src="https://www.cvlibs.net/site/andreas_geiger.jpg" alt="Andreas Geiger" loading="lazy" /><h4><a href="https://www.cvlibs.net/" target="_blank" rel="noopener noreferrer">Andreas Geiger</a></h4><p class="person-affil">University of Tubingen</p></article>
+          <article class="person"><img class="avatar-photo" src="https://anikem.github.io/images/profile_aniK.jpg" alt="Aniruddha Kembhavi" loading="lazy" /><h4><a href="https://anikem.github.io/" target="_blank" rel="noopener noreferrer">Aniruddha Kembhavi</a></h4><p class="person-affil">Wayve</p></article>
+          <article class="person"><img class="avatar-photo" src="https://staff.fnwi.uva.nl/p.s.m.mettes/images/profile-pm.jpg" alt="Pascal Mettes" loading="lazy" /><h4><a href="https://staff.fnwi.uva.nl/p.s.m.mettes/index.html" target="_blank" rel="noopener noreferrer">Pascal Mettes</a></h4><p class="person-affil">University of Amsterdam</p></article>
+          <article class="person"><img class="avatar-photo" src="imgs/mike_show.png" alt="Mike Shou" loading="lazy" /><h4><a href="https://sites.google.com/view/showlab" target="_blank" rel="noopener noreferrer">Mike Shou</a></h4><p class="person-affil">National University of Singapore</p></article>
         </div>
       </div>
     </section>
@@ -169,23 +193,23 @@
       <h2 class="section-title">Organizers</h2>
       <div class="people-frame">
         <div class="organizers organizers-main">
-          <article class="org-item"><img class="avatar-photo" src="https://www.chentang.cc/assets/img/photo.jpg" alt="Chen Tang" loading="lazy" /><h4>Chen Tang</h4><p class="person-affil">MMLab, CUHK</p></article>
-          <article class="org-item"><img class="avatar-photo" src="https://weihonglee.github.io/images/croped_academic.png" alt="Wei-Hong Li" loading="lazy" /><h4>Wei-Hong Li</h4><p class="person-affil">University of Bristol</p></article>
-          <article class="org-item"><img class="avatar-photo" src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=FPugmicAAAAJ&citpid=6" alt="Jacob Chalk" loading="lazy" /><h4>Jacob Chalk</h4><p class="person-affil">University of Bristol</p></article>
-          <article class="org-item"><img class="avatar-photo" src="https://goelarushi.github.io/images/photo.jpg" alt="Arushi Goel" loading="lazy" /><h4>Arushi Goel</h4><p class="person-affil">NVIDIA Research</p></article>
-          <article class="org-item"><img class="avatar-photo" src="https://yuhuixu1993.github.io/assets/img/yuhui-480.webp" alt="Yuhui Xu" loading="lazy" /><h4>Yuhui Xu</h4><p class="person-affil">Google Research</p></article>
-          <article class="org-item"><img class="avatar-photo" src="https://liuzhuang13.github.io/images/zhuangliuc.png" alt="Zhuang Liu" loading="lazy" /><h4>Zhuang Liu</h4><p class="person-affil">Princeton University</p></article>
-          <article class="org-item"><img class="avatar-photo" src="imgs/Aishwarya_Agrawal_new2.jpeg" alt="Aishwarya Agrawal" loading="lazy" /><h4>Aishwarya Agrawal</h4><p class="person-affil">Mila, University of Montreal</p></article>
-          <article class="org-item"><img class="avatar-photo" src="https://wlouyang.github.io/Wanli-New.jpg" alt="Wanli Ouyang" loading="lazy" /><h4>Wanli Ouyang</h4><p class="person-affil">MMLab, CUHK / SZLAI</p></article>
-          <article class="org-item"><img class="avatar-photo" src="https://xyue.io/Xiangyu_files/xiangyu_new.jpg" alt="Xiangyu Yue" loading="lazy" /><h4>Xiangyu Yue</h4><p class="person-affil">MMLab, CUHK</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://www.chentang.cc/assets/img/photo.jpg" alt="Chen Tang" loading="lazy" /><h4><a href="https://www.chentang.cc/" target="_blank" rel="noopener noreferrer">Chen Tang</a></h4><p class="person-affil">MMLab, CUHK</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://weihonglee.github.io/images/croped_academic.png" alt="Wei-Hong Li" loading="lazy" /><h4><a href="https://weihonglee.github.io/" target="_blank" rel="noopener noreferrer">Wei-Hong Li</a></h4><p class="person-affil">University of Bristol</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=FPugmicAAAAJ&citpid=6" alt="Jacob Chalk" loading="lazy" /><h4><a href="https://jacobchalk.github.io/" target="_blank" rel="noopener noreferrer">Jacob Chalk</a></h4><p class="person-affil">University of Bristol</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://goelarushi.github.io/images/photo.jpg" alt="Arushi Goel" loading="lazy" /><h4><a href="https://goelarushi.github.io/" target="_blank" rel="noopener noreferrer">Arushi Goel</a></h4><p class="person-affil">NVIDIA Research</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://yuhuixu1993.github.io/assets/img/yuhui-480.webp" alt="Yuhui Xu" loading="lazy" /><h4><a href="https://yuhuixu1993.github.io/" target="_blank" rel="noopener noreferrer">Yuhui Xu</a></h4><p class="person-affil">Google Research</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://liuzhuang13.github.io/images/zhuangliuc.png" alt="Zhuang Liu" loading="lazy" /><h4><a href="https://liuzhuang13.github.io/" target="_blank" rel="noopener noreferrer">Zhuang Liu</a></h4><p class="person-affil">Princeton University</p></article>
+          <article class="org-item"><img class="avatar-photo" src="imgs/Aishwarya_Agrawal_new2.jpeg" alt="Aishwarya Agrawal" loading="lazy" /><h4><a href="https://www.iro.umontreal.ca/~agrawal/" target="_blank" rel="noopener noreferrer">Aishwarya Agrawal</a></h4><p class="person-affil">Mila, University of Montreal</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://wlouyang.github.io/Wanli-New.jpg" alt="Wanli Ouyang" loading="lazy" /><h4><a href="https://wlouyang.github.io/" target="_blank" rel="noopener noreferrer">Wanli Ouyang</a></h4><p class="person-affil">MMLab, CUHK / SZLAI</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://xyue.io/Xiangyu_files/xiangyu_new.jpg" alt="Xiangyu Yue" loading="lazy" /><h4><a href="https://xyue.io/" target="_blank" rel="noopener noreferrer">Xiangyu Yue</a></h4><p class="person-affil">MMLab, CUHK</p></article>
         </div>
       </div>
 
       <h3 class="subsection-title">Advisory Board</h3>
       <div class="people-frame">
         <div class="organizers organizers-advisors">
-          <article class="org-item"><img class="avatar-photo" src="https://disi.unitn.it/~sebe/uploads/3/0/6/0/30604459/nicu_2.png?206" alt="Nicu Sebe" loading="lazy" /><h4>Nicu Sebe</h4><p class="person-affil">University of Trento</p></article>
-          <article class="org-item"><img class="avatar-photo" src="https://eng.ox.ac.uk/media/3460/phil-torr.jpg?width=250&height=250&v=1d9e2269f6b8a40" alt="Philip H. S. Torr" loading="lazy" /><h4>Philip Torr</h4><p class="person-affil">University of Oxford</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://disi.unitn.it/~sebe/uploads/3/0/6/0/30604459/nicu_2.png?206" alt="Nicu Sebe" loading="lazy" /><h4><a href="https://disi.unitn.it/~sebe/" target="_blank" rel="noopener noreferrer">Nicu Sebe</a></h4><p class="person-affil">University of Trento</p></article>
+          <article class="org-item"><img class="avatar-photo" src="https://eng.ox.ac.uk/media/3460/phil-torr.jpg?width=250&height=250&v=1d9e2269f6b8a40" alt="Philip H. S. Torr" loading="lazy" /><h4><a href="https://www.robots.ox.ac.uk/~phst/" target="_blank" rel="noopener noreferrer">Philip Torr</a></h4><p class="person-affil">University of Oxford</p></article>
         </div>
       </div>
     </section>
