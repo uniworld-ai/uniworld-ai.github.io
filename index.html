@@ -28,6 +28,10 @@
       border-right: 0;
     }
 
+    .hero-banner .eccv-bg {
+      border-radius: 0;
+    }
+
     .person h4 a,
     .org-item h4 a {
       color: #2f6f7d;
@@ -56,7 +60,12 @@
   <header class="topbar">
     <div class="wrap topbar-inner">
       <a class="brand" href="#home">Uni<span>World</span> @ ECCV 2026</a>
-      <nav aria-label="Primary">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav id="primary-nav" aria-label="Primary">
         <a href="#overview">Overview</a>
         <a href="#cfp">Call For Papers</a>
         <a href="#schedule">Schedule</a>
@@ -156,17 +165,17 @@
           </thead>
           <tbody>
             <tr><td>08:45-09:00</td><td>Welcome</td><td>Opening remarks</td></tr>
-            <tr><td>09:00-09:40</td><td>Dima Damen</td><td>Multimodal Video Understanding</td></tr>
-            <tr><td>09:40-10:20</td><td><em>Invited Speaker</em><span class="status tbc">TBC</span></td><td> <em> - </em><span class="status tbc">TBC</span> </td></tr>
+            <tr><td>09:00-09:40</td><td><em>Invited Speaker 1</em></td><td><span class="status tbc">TBC</span></td></tr>
+            <tr><td>09:40-10:20</td><td><em>Invited Speaker 2</em></td><td><span class="status tbc">TBC</span></td></tr>
             <tr><td>10:20-10:40</td><td>Coffee Break + Posters</td><td>-</td></tr>
-            <tr><td>10:40-11:20</td><td>Angela Dai</td><td>3D/4D Scene Generation</td></tr>
-            <tr><td>11:20-12:00</td><td>Andreas Geiger</td><td>3D/4D Scene Understanding</td></tr>
+            <tr><td>10:40-11:20</td><td><em>Invited Speaker 3</em></td><td><span class="status tbc">TBC</span></td></tr>
+            <tr><td>11:20-12:00</td><td><em>Invited Speaker 4</em></td><td><span class="status tbc">TBC</span></td></tr>
             <tr><td>12:00-13:00</td><td>Lunch + Posters</td><td>-</td></tr>
-            <tr><td>13:00-13:40</td><td>Kosta Derpanis</td><td>In Search of Universal Concepts</td></tr>
-            <tr><td>13:40-14:20</td><td>Pascal Mettes</td><td>Hyperbolic Representations in Vision-Language Models</td></tr>
+            <tr><td>13:00-13:40</td><td><em>Invited Speaker 5</em></td><td><span class="status tbc">TBC</span></td></tr>
+            <tr><td>13:40-14:20</td><td><em>Invited Speaker 6</em></td><td><span class="status tbc">TBC</span></td></tr>
             <tr><td>14:20-14:40</td><td>Coffee Break + Posters</td><td>-</td></tr>
-            <tr><td>14:40-15:20</td><td>Mike Shou</td><td>Multimodal Video Generation</td></tr>
-            <tr><td>15:20-16:00</td><td>Aniruddha Kembhavi</td><td>World Modeling</td></tr>
+            <tr><td>14:40-15:20</td><td><em>Invited Speaker 7</em></td><td><span class="status tbc">TBC</span></td></tr>
+            <tr><td>15:20-16:00</td><td><em>Invited Speaker 8</em></td><td><span class="status tbc">TBC</span></td></tr>
             <tr><td>16:00-16:50</td><td>Contributed Oral Papers</td><td>5 x 10-minute presentations</td></tr>
             <tr><td>16:50-17:10</td><td>Awards + Closing + Social</td><td>-</td></tr>
           </tbody>
@@ -175,7 +184,7 @@
     </section>
 
     <section id="speakers">
-      <h2 class="section-title">Invited Speakers</h2>
+      <h2 class="section-title">Invited Speakers (Confirmed)</h2>
       <div class="people-frame">
         <div class="people-grid">
           <article class="person"><img class="avatar-photo" src="https://www.3dunderstanding.org/team/00_angela_dai/picture.jpg" alt="Angela Dai" loading="lazy" /><h4><a href="https://www.3dunderstanding.org/" target="_blank" rel="noopener noreferrer">Angela Dai</a></h4><p class="person-affil">TUM</p></article>

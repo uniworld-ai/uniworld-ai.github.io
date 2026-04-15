@@ -1,7 +1,36 @@
 const navLinks = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+const topbar = document.querySelector('.topbar');
+const navToggle = document.querySelector('.nav-toggle');
+const primaryNav = document.querySelector('#primary-nav');
 const sections = navLinks
   .map((link) => document.querySelector(link.getAttribute('href')))
   .filter(Boolean);
+
+const closeMobileMenu = () => {
+  if (!topbar || !navToggle) {
+    return;
+  }
+
+  topbar.classList.remove('menu-open');
+  navToggle.setAttribute('aria-expanded', 'false');
+};
+
+if (navToggle && topbar && primaryNav) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = topbar.classList.toggle('menu-open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  for (const link of navLinks) {
+    link.addEventListener('click', closeMobileMenu);
+  }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 780) {
+      closeMobileMenu();
+    }
+  });
+}
 
 const setActiveLink = () => {
   const y = window.scrollY + 140;
