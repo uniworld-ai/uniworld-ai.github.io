@@ -320,6 +320,13 @@ section {
   font-size: 0.98rem;
 }
 
+.date-note {
+  margin: 0.35rem 0 0.55rem;
+  color: #7a6d5b;
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
 .overview-tags {
   list-style: none;
   margin: 0;
@@ -391,6 +398,19 @@ section {
   margin-top: 0.02rem;
 }
 
+.guideline-sublist {
+  display: grid;
+  gap: 0.2rem;
+  margin-top: 0.25rem;
+  color: #5b6972;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.guideline-sublist strong {
+  color: #34434b;
+}
+
 .overview-note {
   margin: 0.85rem 0 0;
   max-width: 105ch;
@@ -406,6 +426,17 @@ section {
 
 #cfp .grid-2 {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+.cfp-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.cfp-actions .btn {
+  min-width: 220px;
+  padding-inline: 1.25rem;
 }
 
 .grid-3 {
@@ -432,6 +463,20 @@ section {
 .card li {
   color: #51606a;
   margin: 0;
+}
+
+.card a {
+  color: #2f6f7d;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(47, 111, 125, 0.28);
+  white-space: nowrap;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+
+.card a:hover {
+  color: #1f5562;
+  border-bottom-color: rgba(31, 85, 98, 0.55);
 }
 
 .topics {
@@ -468,6 +513,33 @@ section {
 .meta-list strong {
   min-width: 130px;
   color: #0f1720;
+}
+
+.date-list li {
+  align-items: flex-start;
+}
+
+.date-list {
+  gap: 0.68rem;
+}
+
+.date-sublist {
+  display: grid;
+  gap: 0.18rem;
+  color: #5b6972;
+  font-size: 0.86rem;
+  line-height: 1.4;
+}
+
+.date-sublist > span {
+  display: grid;
+  grid-template-columns: 5.8rem 1fr;
+  gap: 0.3rem;
+}
+
+.date-track {
+  color: #34434b;
+  font-weight: 700;
 }
 
 .countdown {
