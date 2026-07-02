@@ -365,6 +365,25 @@ section {
   line-height: 1.28;
 }
 
+.timeline-scrollbar {
+  display: none;
+}
+
+.timeline-scrollbar[hidden] {
+  display: none;
+}
+
+.timeline-scrollbar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.22);
+  transform: translateX(var(--timeline-thumb-x, 0));
+  transition: width 120ms ease, transform 80ms linear;
+  width: var(--timeline-thumb-width, 40%);
+}
+
 .lead {
   margin: 0;
   color: var(--muted);
@@ -901,39 +920,53 @@ th {
   }
 
   .event-timeline {
-    grid-template-columns: repeat(6, 138px);
-    overflow-x: auto;
-    padding-right: 2.25rem;
-    padding-bottom: 0.45rem;
-    scrollbar-width: thin;
+    grid-template-columns: repeat(6, 118px);
+    gap: 0.35rem;
+    overflow-x: scroll;
+    padding-right: 1.4rem;
+    padding-bottom: 0.55rem;
+    scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
   }
 
-  .hero-timeline::before {
-    content: "";
-    position: absolute;
-    top: 2.2rem;
-    right: 0;
-    bottom: 0.35rem;
-    z-index: 3;
-    width: 3.2rem;
-    border-radius: 0 10px 10px 0;
-    background: linear-gradient(90deg, rgba(101, 55, 43, 0), rgba(101, 55, 43, 0.82));
-    pointer-events: none;
+  .event-timeline li {
+    gap: 0.28rem;
   }
 
-  .hero-timeline::after {
-    content: "";
-    position: absolute;
-    top: 2.62rem;
-    right: 0.72rem;
-    z-index: 4;
-    width: 0.55rem;
-    height: 0.55rem;
-    border-top: 2px solid rgba(255, 255, 255, 0.92);
-    border-right: 2px solid rgba(255, 255, 255, 0.92);
-    transform: rotate(45deg);
-    pointer-events: none;
+  .event-timeline li::before {
+    left: calc(50% + 0.38rem);
+    right: calc(-50% - 0.02rem);
+    top: 0.37rem;
+  }
+
+  .event-node {
+    width: 0.78rem;
+    height: 0.78rem;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.15);
+  }
+
+  .event-date {
+    font-size: 0.78rem;
+  }
+
+  .event-name {
+    max-width: 13ch;
+    font-size: 0.68rem;
+    line-height: 1.22;
+  }
+
+  .event-timeline::-webkit-scrollbar {
+    display: none;
+  }
+
+  .timeline-scrollbar {
+    display: block;
+    width: min(13rem, 76%);
+    height: 8px;
+    margin: 0.1rem auto 0;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.28);
+    overflow: hidden;
   }
 
   .topbar-inner {

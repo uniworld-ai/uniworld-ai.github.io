@@ -51,6 +51,39 @@ const setActiveLink = () => {
 window.addEventListener('scroll', setActiveLink, { passive: true });
 window.addEventListener('load', setActiveLink);
 
+const timeline = document.querySelector('.hero-timeline .event-timeline');
+const timelineScrollbar = document.querySelector('.hero-timeline .timeline-scrollbar');
+const timelineScrollbarThumb = timelineScrollbar ? timelineScrollbar.querySelector('span') : null;
+
+const updateTimelineScrollbar = () => {
+  if (!timeline || !timelineScrollbar || !timelineScrollbarThumb) {
+    return;
+  }
+
+  const maxScroll = timeline.scrollWidth - timeline.clientWidth;
+  const trackWidth = timelineScrollbar.clientWidth;
+
+  if (maxScroll <= 0 || trackWidth <= 0) {
+    timelineScrollbar.hidden = true;
+    return;
+  }
+
+  timelineScrollbar.hidden = false;
+  const thumbWidth = Math.max(36, (timeline.clientWidth / timeline.scrollWidth) * trackWidth);
+  const maxThumbX = trackWidth - thumbWidth;
+  const thumbX = (timeline.scrollLeft / maxScroll) * maxThumbX;
+
+  timelineScrollbarThumb.style.setProperty('--timeline-thumb-width', `${thumbWidth}px`);
+  timelineScrollbarThumb.style.setProperty('--timeline-thumb-x', `${thumbX}px`);
+};
+
+if (timeline && timelineScrollbarThumb) {
+  timeline.addEventListener('scroll', updateTimelineScrollbar, { passive: true });
+  window.addEventListener('resize', updateTimelineScrollbar);
+  window.addEventListener('load', updateTimelineScrollbar);
+  updateTimelineScrollbar();
+}
+
 const yearNode = document.querySelector('[data-current-year]');
 if (yearNode) {
   yearNode.textContent = String(new Date().getFullYear());
