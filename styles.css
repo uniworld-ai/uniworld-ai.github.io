@@ -195,6 +195,32 @@ nav a.active {
   animation: rise 900ms ease both;
 }
 
+.hero-timeline {
+  position: relative;
+  width: min(100%, 960px);
+  margin-top: 1.35rem;
+  animation: rise 1100ms ease both;
+}
+
+.hero-timeline-title {
+  margin: 0 0 0.65rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.hero-timeline-title span {
+  display: inline-block;
+  margin-left: 0.45rem;
+  color: rgba(255, 255, 255, 0.68);
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .pills {
   margin-top: 1.25rem;
   display: flex;
@@ -275,6 +301,68 @@ section {
   height: 4px;
   border-radius: 999px;
   background: linear-gradient(90deg, rgba(138, 75, 58, 0.9), rgba(138, 75, 58, 0.26));
+}
+
+.event-timeline {
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding: 0.55rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.event-timeline li {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  gap: 0.38rem;
+  min-width: 0;
+  text-align: center;
+}
+
+.event-timeline li::before {
+  content: "";
+  position: absolute;
+  left: calc(50% + 0.45rem);
+  right: calc(-50% - 0.1rem);
+  top: 0.43rem;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.event-timeline li:last-child::before {
+  display: none;
+}
+
+.event-node {
+  position: relative;
+  z-index: 1;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  background: #f7c979;
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.16);
+}
+
+.event-date {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-shadow: 0 2px 8px rgba(18, 25, 27, 0.24);
+}
+
+.event-name {
+  max-width: 15ch;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.28;
 }
 
 .lead {
@@ -542,6 +630,30 @@ section {
   font-weight: 700;
 }
 
+.deadline-update {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  align-items: baseline;
+}
+
+.deadline-update del {
+  color: #8c969d;
+}
+
+.deadline-update span {
+  color: #2f6f7d;
+  font-weight: 800;
+}
+
+.hero-timeline .deadline-update del {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.hero-timeline .deadline-update span {
+  color: #ffffff;
+}
+
 .countdown {
   margin-top: 0.85rem;
   border-top: 1px dashed #d8cebc;
@@ -786,6 +898,42 @@ th {
 
   .overview-tags {
     grid-template-columns: 1fr;
+  }
+
+  .event-timeline {
+    grid-template-columns: repeat(6, 138px);
+    overflow-x: auto;
+    padding-right: 2.25rem;
+    padding-bottom: 0.45rem;
+    scrollbar-width: thin;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hero-timeline::before {
+    content: "";
+    position: absolute;
+    top: 2.2rem;
+    right: 0;
+    bottom: 0.35rem;
+    z-index: 3;
+    width: 3.2rem;
+    border-radius: 0 10px 10px 0;
+    background: linear-gradient(90deg, rgba(101, 55, 43, 0), rgba(101, 55, 43, 0.82));
+    pointer-events: none;
+  }
+
+  .hero-timeline::after {
+    content: "";
+    position: absolute;
+    top: 2.62rem;
+    right: 0.72rem;
+    z-index: 4;
+    width: 0.55rem;
+    height: 0.55rem;
+    border-top: 2px solid rgba(255, 255, 255, 0.92);
+    border-right: 2px solid rgba(255, 255, 255, 0.92);
+    transform: rotate(45deg);
+    pointer-events: none;
   }
 
   .topbar-inner {
