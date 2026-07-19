@@ -54,6 +54,16 @@ window.addEventListener('load', setActiveLink);
 const timeline = document.querySelector('.hero-timeline .event-timeline');
 const timelineScrollbar = document.querySelector('.hero-timeline .timeline-scrollbar');
 const timelineScrollbarThumb = timelineScrollbar ? timelineScrollbar.querySelector('span') : null;
+const timelineEvents = timeline ? Array.from(timeline.querySelectorAll('[data-event-time]')) : [];
+
+const updateTimelineEventStates = () => {
+  const now = Date.now();
+
+  for (const event of timelineEvents) {
+    const eventTime = Date.parse(event.getAttribute('data-event-time') || '');
+    event.classList.toggle('is-inactive', !Number.isNaN(eventTime) && now > eventTime);
+  }
+};
 
 const updateTimelineScrollbar = () => {
   if (!timeline || !timelineScrollbar || !timelineScrollbarThumb) {
@@ -82,6 +92,11 @@ if (timeline && timelineScrollbarThumb) {
   window.addEventListener('resize', updateTimelineScrollbar);
   window.addEventListener('load', updateTimelineScrollbar);
   updateTimelineScrollbar();
+}
+
+if (timelineEvents.length > 0) {
+  updateTimelineEventStates();
+  window.setInterval(updateTimelineEventStates, 60000);
 }
 
 const yearNode = document.querySelector('[data-current-year]');
