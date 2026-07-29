@@ -195,6 +195,40 @@ nav a.active {
   animation: rise 900ms ease both;
 }
 
+.decision-notice {
+  width: min(100%, 900px);
+  margin-top: 0.8rem;
+  padding: 0.52rem 0.72rem;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: start;
+  gap: 0.7rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(42, 59, 61, 0.16);
+  color: rgba(255, 255, 255, 0.76);
+  text-align: left;
+  backdrop-filter: blur(4px);
+  animation: rise 1180ms ease both;
+}
+
+.decision-notice p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.decision-notice .decision-notice-title {
+  padding-top: 0.08rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  line-height: 1.35;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 .hero-timeline {
   position: relative;
   width: min(100%, 960px);
@@ -1047,5 +1081,15 @@ th {
   .hero-banner {
     min-height: 320px;
     padding: 2rem 0.75rem 1.7rem;
+  }
+
+  .decision-notice {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+    padding: 0.55rem 0.65rem;
+  }
+
+  .decision-notice .decision-notice-title {
+    white-space: normal;
   }
 }
