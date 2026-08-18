@@ -794,9 +794,6 @@ section {
 }
 
 .accepted-papers-columns {
-  display: grid;
-  grid-template-columns: 7rem minmax(0, 1fr);
-  gap: 1rem;
   padding: 0.68rem 1rem;
   border-bottom: 1px solid #ded2bf;
   background: #f8f3e8;
@@ -816,10 +813,6 @@ section {
 
 .accepted-papers-list li {
   min-width: 0;
-  display: grid;
-  grid-template-columns: 7rem minmax(0, 1fr);
-  gap: 1rem;
-  align-items: start;
   padding: 0.9rem 1rem;
   background: #fffdf8;
   transition: background-color 180ms ease;
@@ -831,16 +824,6 @@ section {
 
 .accepted-papers-list li:hover {
   background: #f8f3e8;
-}
-
-.paper-number {
-  color: #8a4b3a;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.055em;
-  line-height: 1.45;
-  text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .paper-title {
@@ -1223,12 +1206,6 @@ th {
   .accepted-papers-heading {
     grid-template-columns: 1fr;
     gap: 0.8rem;
-  }
-
-  .accepted-papers-columns,
-  .accepted-papers-list li {
-    grid-template-columns: 4.8rem minmax(0, 1fr);
-    gap: 0.65rem;
   }
 
   .author-info-grid {
