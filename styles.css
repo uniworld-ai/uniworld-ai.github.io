@@ -853,6 +853,12 @@ section {
   border: 1px solid #eacfc2;
 }
 
+.paper-status.poster {
+  color: #2f6f7d;
+  background: #e5f0ef;
+  border: 1px solid #c9dfdc;
+}
+
 .grid-3 {
   margin-top: 1rem;
   display: grid;
