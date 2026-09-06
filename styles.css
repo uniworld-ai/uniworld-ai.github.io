@@ -833,6 +833,26 @@ section {
   line-height: 1.45;
 }
 
+.paper-status {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.62rem;
+  padding: 0.16rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.67rem;
+  font-weight: 800;
+  letter-spacing: 0.045em;
+  line-height: 1.25;
+  text-transform: uppercase;
+  vertical-align: 0.08em;
+}
+
+.paper-status.oral {
+  color: #8a4b3a;
+  background: #f7e8df;
+  border: 1px solid #eacfc2;
+}
+
 .grid-3 {
   margin-top: 1rem;
   display: grid;
