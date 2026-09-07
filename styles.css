@@ -1021,6 +1021,25 @@ table {
   min-width: 720px;
 }
 
+.schedule-wrap table {
+  table-layout: fixed;
+}
+
+.schedule-wrap th:nth-child(1),
+.schedule-wrap td:nth-child(1) {
+  width: 13%;
+}
+
+.schedule-wrap th:nth-child(2),
+.schedule-wrap td:nth-child(2) {
+  width: 18%;
+}
+
+.schedule-wrap th:nth-child(3),
+.schedule-wrap td:nth-child(3) {
+  width: 69%;
+}
+
 th,
 td {
   padding: 0.72rem 0.75rem;
